@@ -1,0 +1,8 @@
+dist
+node_modules
+webpack*.ts
+*.d.ts
+*.js
+*.json
+coverage
+__tests__

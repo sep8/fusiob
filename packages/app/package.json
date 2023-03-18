@@ -1,0 +1,54 @@
+{
+  "name": "@sep9/app",
+  "version": "0.2.16",
+  "description": "> TODO: description",
+  "author": "mike",
+  "homepage": "https://github.com/sep9/monorepo/tree/main/packages/app#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "monorepo",
+    "react",
+    "webpack",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sep9/monorepo.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+    "build": "npm run clean && tsc --build && webpack --node-env=production",
+    "tscheck": "cross-env TSCHECK=true webpack --node-env=development",
+    "lint": "eslint src --ext .ts,.tsx,.js --fix",
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/sep9/monorepo/issues"
+  },
+  "devDependencies": {
+    "@types/fork-ts-checker-webpack-plugin": "^0.4.5",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.11.0",
+    "fork-ts-checker-webpack-plugin": "^7.2.1",
+    "jest": "^27.5.1",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "@sep9/components": "^0.2.16",
+    "@sep9/utils": "^0.2.16"
+  },
+  "gitHead": "39422be887d72d592c7a485125b335e59a9a4e7e"
+}

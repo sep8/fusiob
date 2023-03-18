@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "declaration": true,
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "target": "ES6",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "jsx": "react",
+    "importHelpers": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+  },
+  "references": [
+    {
+      "path": "./packages/components"
+    },
+    {
+      "path": "./packages/utils"
+    },
+    {
+      "path": "./packages/app"
+    }
+  ]
+}
