@@ -68,5 +68,9 @@
   "peerDependencies": {
     "react": "v17.0.2"
   },
-  "workspaces": ["packages/app", "packages/components", "packages/utils"]
+  "workspaces": [
+    "packages/app",
+    "packages/components",
+    "packages/utils"
+  ]
 }
