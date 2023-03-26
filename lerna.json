@@ -1,26 +1,5 @@
 {
-  "packages": [
-    "packages/app",
-    "packages/components",
-    "packages/utils"
-  ],
-  "npmClient": "yarn",
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "useWorkspaces": true,
-  "version": "0.2.16",
-  "command": {
-    "version": {
-      "allowBranch": [
-        "develop",
-        "main"
-      ],
-      "message": "chore(release): publish %s [skip-ci]"
-    }
-  },
-  "changelogPreset": "conventional-commits",
-  "ignoreChanges": [
-    "example/**",
-    "**/*.md",
-    "**/__tests__/**"
-  ],
-  "granularPathspec": false
+  "version": "0.0.0"
 }

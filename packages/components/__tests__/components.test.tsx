@@ -4,7 +4,7 @@ import TestComponents from '../src'
 
 describe('Components test', () => {
     it('should work well', () => {
-       const { getByText } = render(<TestComponents name='foo' />)
+       const { getByText } = render(<TestComponents label='foo' />)
        expect(getByText(/foo/)).toBeInTheDocument()
     });
 });

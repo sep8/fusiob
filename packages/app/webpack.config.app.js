@@ -2,9 +2,9 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
-  entry:path.resolve(__dirname, 'src/index.tsx'),
+  entry:path.resolve(__dirname, 'src/app.tsx'),
   output: {
-    filename: "index.js",
+    filename: "app.js",
     path: path.resolve(__dirname, `dist`),
   },
   module: {

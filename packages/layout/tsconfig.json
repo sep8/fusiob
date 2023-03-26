@@ -15,8 +15,6 @@
     "__tests__"
   ],
   "references": [{
-    "path": "../layout"
-  }, {
     "path": "../components"
   }, {
     "path": "../utils"

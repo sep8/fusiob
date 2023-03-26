@@ -1,4 +1,4 @@
-# `@sep9/components`
+# `@fusion/components`
 
 > Test only, don't download
 > TODO: description
@@ -6,7 +6,7 @@
 ## Usage
 
 ```
-import components = from '@sep9/components'
+import components = from '@fusion/components'
 
 // TODO: DEMONSTRATE API
 ```

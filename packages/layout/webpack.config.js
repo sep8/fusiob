@@ -2,7 +2,6 @@ const path = require("path");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const isProduction = process.env.NODE_ENV == "production";
 const isTSCheck = !!process.env.TSCHECK;
-const isSERVE = !!process.env.SERVE;
 
 const config = {
   entry: path.resolve(__dirname, 'src/index.tsx'),
@@ -48,9 +47,6 @@ if (isProduction) {
         },
       })
     );
-  }
-  if(process.env.isSERVE) {
-    config.plugins.push(new HtmlWebpackPlugin({template: './index.html'}))
   }
 }
 

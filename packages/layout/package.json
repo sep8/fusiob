@@ -1,9 +1,9 @@
 {
-  "name": "@fusion/utils",
+  "name": "@fusion/layout",
   "version": "0.2.16",
   "description": "> TODO: description",
   "author": "mike",
-  "homepage": "https://github.com/sep9/monorepo/tree/main/packages/utils#readme",
+  "homepage": "https://github.com/sep9/monorepo/tree/main/packages/app#readme",
   "license": "ISC",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,7 @@
     "build": "npm run clean && tsc --build && webpack --node-env=production",
     "build:dev": "npm run clean && tsc --build && webpack --node-env=development",
     "tscheck": "cross-env TSCHECK=true webpack --node-env=development",
-    "lint": "eslint src --ext .ts,.tsx,.js  --fix",
+    "lint": "eslint src --ext .ts,.tsx,.js --fix",
     "test": "jest"
   },
   "files": [
@@ -23,15 +23,16 @@
   ],
   "keywords": [
     "monorepo",
+    "react",
     "webpack",
     "typescript"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sep9/monorepo.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "bugs": {
     "url": "https://github.com/sep9/monorepo/issues"
@@ -45,5 +46,9 @@
     "rimraf": "^3.0.2",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "@fusion/components": "*",
+    "@fusion/utils": "*"
   }
 }
