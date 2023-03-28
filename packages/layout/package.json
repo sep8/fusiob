@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "@fusion/components": "*",
-    "@fusion/utils": "*"
+    "@fusion/utils": "*",
+    "interactjs": "^1.10.17"
   }
 }
