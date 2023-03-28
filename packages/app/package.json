@@ -11,7 +11,7 @@
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
     "build": "npm run clean && tsc --build && webpack --node-env=production",
     "build:dev": "npm run clean && tsc --build && webpack --node-env=development",
-    "start": "cross-env SERVE=true webpack serve --node-env development --open --config=webpack.config.app.js",
+    "start": "webpack serve --node-env development --open",
     "tscheck": "cross-env TSCHECK=true webpack --node-env=development",
     "lint": "eslint src --ext .ts,.tsx,.js --fix",
     "test": "jest"

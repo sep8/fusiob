@@ -1,17 +1,14 @@
 const path = require("path");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const isProduction = process.env.NODE_ENV == "production";
 const isTSCheck = !!process.env.TSCHECK;
-const isSERVE = !!process.env.SERVE;
 
 const config = {
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     filename: "index.js",
-    path: path.resolve(__dirname, `dist`),
-    library: {
-      type: 'umd',
-    },
+    path: path.resolve(__dirname, `dist`)
   },
   module: {
     rules: [
@@ -24,9 +21,6 @@ const config = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".json"],
-  },
-  externals: {
-    react: "react",
   },
   plugins: [],
 };
@@ -48,9 +42,8 @@ if (isProduction) {
         },
       })
     );
-  }
-  if(process.env.isSERVE) {
-    config.plugins.push(new HtmlWebpackPlugin({template: './index.html'}))
+  } else {
+    config.plugins.push(new HtmlWebpackPlugin({ template: "./index.html" }))
   }
 }
 

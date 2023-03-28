@@ -1,5 +1,17 @@
 import React from 'react'
-import App from './index'
-import ReactDOM from 'react-dom'
+import Layout from '@fusion/layout'
+import TestComponent from '@fusion/components'
+import trimString from '@fusion/utils'
 
-ReactDOM.render(<App label='APP Package' />, document.getElementById('root'))
+const App = (props: { label: string }): JSX.Element => {
+  const label = trimString(props.label ?? 'App package')
+
+  return (
+    <div className='app-root'>
+      <TestComponent label={label}></TestComponent>
+      <Layout label='Layout package'></Layout>
+    </div>
+  )
+}
+
+export default App
